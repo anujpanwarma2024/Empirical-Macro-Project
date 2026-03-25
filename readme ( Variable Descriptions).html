@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Variables Reference Table</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 1400px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            padding: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        thead {
+            background: #f8f9fa;
+            position: sticky;
+            top: 0;
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            color: #495057;
+            border-bottom: 2px solid #dee2e6;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid #e9ecef;
+            color: #212529;
+        }
+
+        tbody tr {
+            transition: background-color 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .variable-name {
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            color: #667eea;
+            background: #f0f3ff;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .frequency-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .freq-daily {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .freq-weekly {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .source-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .source-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .table-wrapper {
+                padding: 1rem;
+            }
+
+            th, td {
+                padding: 0.75rem 0.5rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Economic Variables Reference</h1>
+            <p>Comprehensive list of macroeconomic and financial market variables</p>
+        </div>
+        
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Variable Name</th>
+                        <th>Description</th>
+                        <th>Frequency</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="variable-name">US3M</span></td>
+                        <td>U.S. 3-Month Treasury Bill Yield (level)</td>
+                        <td><span class="frequency-badge freq-daily">Daily → Weekly</span></td>
+                        <td>FRED (TB3MS)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="variable-name">US2Y</span></td>
+                        <td>U.S. 2-Year Treasury Yield (level)</td>
+                        <td><span class="frequency-badge freq-daily">Daily → Weekly</span></td>
+                        <td>FRED (DGS2)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="variable-name">US10Y</span></td>
+                        <td>U.S. 10-Year Treasury Yield (level)</td>
+                        <td><span class="frequency-badge freq-daily">Daily → Weekly</span></td>
+                        <td>FRED (DGS10)</td>
+                    </tr>
+                    <tr>
+                        <td><span class="variable-name">IND3M</span></td>
+                        <td>India 91-day Treasury Bill Yield (level)</td>
+                        <td><span class="frequency-badge freq-daily">Daily → Weekly</span></td>
+                        <td>Investing.com</td>
+                    </tr>
+                    <tr>
+                        <td><span class="variable-name">IND2Y</span></td>
+                        <td>India 2-Year Government Bond Yield</td>
+                        <td><span class="frequency-badge freq-daily">Daily → Weekly</span></td>
+                        <td>Investing.com</td>
+                    </tr>
+                    <tr>
+                        <td><span class="variable-name">IND10Y</span></td>
+                        <td>India 10-Year Government Bond Yield</td>
+                        <td><span class="frequency-badge freq-daily">Daily → Weekly</span></td>
+                        <td>Investing.com</td>
+                    </tr>
+                    <tr>
+                        <td><span class="variable-name">US3M_chg, US2Y_chg, US10Y_chg</span></td>
+                        <td>Weekly changes in U.S. yields</td>
+                        <td><span class="frequency-badge freq-weekly">Weekly</span></td>
+                        <td>Constructed</td>
+                    </tr>
+                    <tr>
+                        <td><span class="variable-name">IND3M_chg, IND2Y_chg, IND10Y_chg</span></td>
+                        <td>Weekly changes in Indian yields</td>
+                        <td><span class="frequency-badge freq-weekly">Weekly</span></td>
+                        <td>Constructed</td>
+                    </tr>
+                    <tr>
+                        <td><span class="variable-name">FX</span></td>
+                        <td>USD/INR Exchange Rate (spot)</td>
+                        <td><span class="frequency-badge freq-daily">Daily → Weekly</span></td>
+                        <td>Investing.com</td>
+                    </tr>
+                    <tr>
+                        <td><span class="variable-name">FX_ret</span></td>
+                        <td>Weekly log returns of FX</td>
+                        <td><span class="frequency-badge freq-weekly">Weekly</span></td>
+                        <td>Constructed</td>
+                    </tr>
+                    <tr>
+                        <td><span class="variable-name">NIFTY</span></td>
+                        <td>NIFTY-50 Index Level</td>
+                        <td><span class="frequency-badge freq-daily">Daily → Weekly</span></td>
+                        <td>NSE / Investing.com</td>
+                    </tr>
+                    <tr>
+                        <td><span class="variable-name">NIFTY_ret</span></td>
+                        <td>Weekly log returns</td>
+                        <td><span class="frequency-badge freq-weekly">Weekly</span></td>
+                        <td>Constructed</td>
+                    </tr>
+                    <tr>
+                        <td><span class="variable-name">SPX</span></td>
+                        <td>S&P 500 Index Level</td>
+                        <td><span class="frequency-badge freq-daily">Daily → Weekly</span></td>
+                        <td>Yahoo Finance / Investing.com</td>
+                    </tr>
+                    <tr>
+                        <td><span class="variable-name">SPX_ret</span></td>
+                        <td>Weekly log returns</td>
+                        <td><span class="frequency-badge freq-weekly">Weekly</span></td>
+                        <td>Constructed</td>
+                    </tr>
+                    <tr>
+                        <td><span class="variable-name">Trend_* variables</span></td>
+                        <td>HP-filter trend for yields</td>
+                        <td><span class="frequency-badge freq-weekly">Weekly</span></td>
+                        <td>Constructed</td>
+                    </tr>
+                    <tr>
+                        <td><span class="variable-name">Gap_* variables</span></td>
+                        <td>Deviation from trend</td>
+                        <td><span class="frequency-badge freq-weekly">Weekly</span></td>
+                        <td>Constructed</td>
+                    </tr>
+                    <tr>
+                        <td><span class="variable-name">GARCH_vol_* variables</span></td>
+                        <td>Conditional volatility from GARCH(1,1)</td>
+                        <td><span class="frequency-badge freq-weekly">Weekly</span></td>
+                        <td>Constructed</td>
+                    </tr>
+                    <tr>
+                        <td><span class="variable-name">Shock_* variables (optional)</span></td>
+                        <td>Structural shocks from SVAR</td>
+                        <td><span class="frequency-badge freq-weekly">Weekly</span></td>
+                        <td>Constructed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

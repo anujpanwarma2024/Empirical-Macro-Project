@@ -1,0 +1,27 @@
+# Core scientific stack
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.11.0
+
+# Econometrics & time series
+statsmodels>=0.14.0        # VAR, ARIMA, cointegration, unit-root tests
+linearmodels>=5.3.0        # Panel data / IV estimation
+
+# Data fetching
+pandas-datareader>=0.10.0  # FRED, World Bank
+requests>=2.31.0
+openpyxl>=3.1.0            # Reading .xlsx data files
+
+# Visualisation
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.15.0
+
+# Jupyter
+jupyter>=1.0.0
+ipykernel>=6.25.0
+nbformat>=5.9.0
+
+# Utilities
+tqdm>=4.65.0
+python-dotenv>=1.0.0
